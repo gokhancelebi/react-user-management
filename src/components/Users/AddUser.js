@@ -53,7 +53,7 @@ const AddUser = (props) => {
 
     return (
         <div className='w-full'>
-            {error && <Modal title={error.title} message={error.message} onConfirm={errorHandler}/>}
+            {error && <Modal title={error.title} message={error.message} onClose={errorHandler}/>}
             <Card className='p-5'>
                 <form action=""
                       onSubmit={addUserHandler}
