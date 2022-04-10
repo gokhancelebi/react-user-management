@@ -22,7 +22,7 @@ const Modal = (props) => {
                     </p>
                 </div>
                 <footer className={styles.actions}>
-                    <Button onClick={props.onConfirm}
+                    <Button onClick={onClose}
                             className='text-black border-2 p-2 rounded border-black'>Okay</Button>
                 </footer>
             </Card>
