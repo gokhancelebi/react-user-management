@@ -1,6 +1,6 @@
 import Card from "../Card";
 import Button from "../Button";
-
+import Wrapper from "../../Helpers/Wrapper";
 import styles from "./index.module.scss";
 
 const Modal = (props) => {
@@ -10,7 +10,7 @@ const Modal = (props) => {
     }
 
     return (
-        <div>
+        <>
             <div className={styles.backdrop} onClick={props.onConfirm}/>
             <Card className={styles.modal}>
                 <header className={styles.header}>
@@ -26,7 +26,7 @@ const Modal = (props) => {
                             className='text-black border-2 p-2 rounded border-black'>Okay</Button>
                 </footer>
             </Card>
-        </div>
+        </>
     )
 }
 

@@ -2,6 +2,7 @@ import Button from "../UI/Button";
 import {useState} from "react";
 import Card from "../UI/Card";
 import Modal from "../UI/Modal";
+import Wrapper from "../Helpers/Wrapper";
 
 const AddUser = (props) => {
 
@@ -52,8 +53,14 @@ const AddUser = (props) => {
     }
 
     return (
-        <div className='w-full'>
-            {error && <Modal title={error.title} message={error.message} onClose={errorHandler}/>}
+        <Wrapper className='w-full'>
+            {error && (
+                <Modal
+                    title={error.title}
+                    message={error.message}
+                    onClose={errorHandler}
+                />
+            )}
             <Card className='p-5'>
                 <form action=""
                       onSubmit={addUserHandler}
@@ -78,7 +85,7 @@ const AddUser = (props) => {
                     >Add User</Button>
                 </form>
             </Card>
-        </div>
+        </Wrapper>
     )
 }
 
